@@ -28,7 +28,7 @@ class LinebotController < ApplicationController
         "成功者になろうとするな。価値ある者になろうとせよ。-アルバート・アインシュタイン-",
         "ディズニーランドが完成することはない。想像力が世の中にある限り進化し続けるだろう。-ウォルト・ディズニー-",
         "成功とは、どん底に落ちた時、どれほど高く跳ね上がれるか、ということである。-ジョージ・パットン-[陸軍軍人]"].shuffle.first
-      elsif event.message['text'].include?("一成の名言")
+      elsif event.message['text'].include?("一成からめいちゃんへ")
         response = ["大好きだよ","愛してるよ","好きだよ"].shuffle.first
       else
         response = ["「名言」と打つと偉人の名言が見れます。元気を貰おう！"]
