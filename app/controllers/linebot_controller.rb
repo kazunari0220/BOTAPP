@@ -21,33 +21,16 @@ class LinebotController < ApplicationController
     events = client.parse_events_from(body)
 
     events.each { |event|
-      case event
-      when Line::Bot::Event::Message
-        case event.type
-        when Line::Bot::Event::MessageType::Text
-          # LINEから送られてきたメッセージが「アンケート」と一致するかチェック
-          if event.message['text'].eql?('名言')
-            client.reply_message(event['replyToken'])
-              {
-                "type": "text",
-                "text": "Hello, world"
-              }
-            # private内のtemplateメソッドを呼び出します。
-            
-          end
+      if event.is_a?(Line::Bot::Event::Message)
+        if event.type === Line::Bot::Event::MessageType::Text
+          message = {
+            type: 'text',
+            text: event.message['text']
+          }
+          client.reply_message(event['replyToken'], message)
         end
       end
-    }
+    end
 
-    head :ok
+    "OK"
   end
-
-#   private
-
-#   def template
-#     {
-#     "type": "text",
-#     "text": "Hello, world"
-#     }
-#   end
-# end
