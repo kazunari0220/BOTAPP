@@ -21,12 +21,10 @@ class LinebotController < ApplicationController
     events = client.parse_events_from(body)
 
     events.each { |event|
-      if event.message['text'].include?("好き")
-        response = "いひひ"
-      else event.message["text"].include?("行ってきます")
-        response = "はーい"
+      if event.message['text'].include?("名言")
+        response = ["大吉", "中吉", "小吉", "凶", "大凶"].shuffle.first
       end
-      
+
       case event
       when Line::Bot::Event::Message
         case event.type
