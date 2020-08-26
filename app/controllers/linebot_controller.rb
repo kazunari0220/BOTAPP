@@ -41,12 +41,12 @@ class LinebotController < ApplicationController
     head :ok
   end
 
-  private
+#   private
 
-  def template
-    {
-    "type": "text",
-    "text": "Hello, world"
-    }
-  end
-end
+#   def template
+#     {
+#     "type": "text",
+#     "text": "Hello, world"
+#     }
+#   end
+# end
