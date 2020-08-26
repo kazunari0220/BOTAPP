@@ -31,7 +31,7 @@ class LinebotController < ApplicationController
       elsif event.message['text'].include?("一成からめいちゃんへ")
         response = ["大好きだよ","愛してるよ","好きだよ"].shuffle.first
       else
-        response = ["「名言」と打つと偉人の名言が見れます。元気を貰おう！"].first
+        response = "「名言」と打つと偉人の名言が見れます。元気を貰おう！"
       end
 
       case event
