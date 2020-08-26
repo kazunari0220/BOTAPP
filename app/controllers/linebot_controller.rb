@@ -22,7 +22,7 @@ class LinebotController < ApplicationController
 
     events.each { |event|
       if event.message['text'].include?("名言")
-        response = ["大吉", "中吉", "小吉", "凶", "大凶"].shuffle.first
+        response = ["限界を設けているのも自分、可能性を信じているのも自分", "行く手に川があったら渡ればいいじゃないか。", "成功とは、どん底に落ちた時、どれほど高く跳ね上がれるか、ということである"].shuffle.first
       end
 
       case event
