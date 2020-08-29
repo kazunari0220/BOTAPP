@@ -47,7 +47,6 @@ class LinebotController < ApplicationController
                   "action": {
                     "type": "postback",
                     "label": "Buy",
-                    "data": "action=buy&itemid=111"
                   }
                 }
               ]
