@@ -46,7 +46,7 @@ class LinebotController < ApplicationController
               "imageSize": "cover",
               "imageBackgroundColor": "#FFFFFF",
               "title": "Menu",
-              "text": "Please select",
+              "text": "Please select"
             #   "defaultAction": {
             #       "type": "uri",
             #       "label": "View detail",
@@ -70,6 +70,7 @@ class LinebotController < ApplicationController
             #       }
             #   ]
             # }
+            }
           }
           client.reply_message(event['replyToken'], message)
         end
