@@ -53,6 +53,9 @@ class LinebotController < ApplicationController
                 "uri": "http://example.com/page/123"
               },
               "actions": [
+                {
+                  "type": "postback",
+                }
               ]
             }
           }
