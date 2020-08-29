@@ -39,6 +39,9 @@ class LinebotController < ApplicationController
         case event.type
         when Line::Bot::Event::MessageType::Text
           message = {
+            type: 'image',
+            originalContentUrl: '/sky.png',
+            previewImageUrl: '/sky.png',
             type: 'text',
             text: response
           }
