@@ -40,6 +40,7 @@ class LinebotController < ApplicationController
             "type": "image",
             "originalContentUrl": "https://example.com/original.jpg",
             "previewImageUrl": "https://example.com/preview.jpg",
+            "type": "text",
             "text": "こんにちは"
           }
           client.reply_message(event['replyToken'], message)
