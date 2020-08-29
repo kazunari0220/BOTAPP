@@ -63,11 +63,6 @@ class LinebotController < ApplicationController
                   "label": "Add to cart",
                   "data": "action=add&itemid=123"
                 },
-                {
-                  "type": "uri",
-                  "label": "View detail",
-                  "uri": "http://example.com/page/123"
-                }
               ]
             }
           }
