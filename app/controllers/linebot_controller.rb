@@ -39,9 +39,11 @@ class LinebotController < ApplicationController
           message = {
             "type": "image",
             "originalContentUrl": "https://example.com/original.jpg",
-            "previewImageUrl": "https://example.com/preview.jpg",
-              "type": "text",
-              "text": "こんにちは"
+            "previewImageUrl": "https://example.com/preview.jpg"
+          }
+          message = {
+            "type": "text",
+            "text": "Hello, world"
           }
           client.reply_message(event['replyToken'], message)
         end
