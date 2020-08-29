@@ -40,8 +40,8 @@ class LinebotController < ApplicationController
         when Line::Bot::Event::MessageType::Text
           message = {
             type: 'image',
-            originalContentUrl: '/sky.png',
-            previewImageUrl: '/sky.png',
+            originalContentUrl: 'https://example.com/original.jpg',
+            previewImageUrl: 'https://example.com/preview.jpg',
             type: 'text',
             text: response
           }
