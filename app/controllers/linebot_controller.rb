@@ -46,7 +46,7 @@ class LinebotController < ApplicationController
                   "imageUrl": "https://example.com/bot/images/item1.jpg",
                   "action": {
                     "type": "postback",
-                    "label": "Buy",
+                    "label": "Buy"
                   }
                 }
               ]
