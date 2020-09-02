@@ -34,6 +34,7 @@ class LinebotController < ApplicationController
         "成功とは、どん底に落ちた時、どれほど高く跳ね上がれるか、ということである。-ジョージ・パットン-[陸軍軍人]"].shuffle.first
         if respons == 7
           puts "人生はやり直しが聞かないといいますが"
+        end
       end
 
       case event
